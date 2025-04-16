@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - School Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-school"></i>
+                <h2>School Admin</h2>
+            </div>
+            <nav>
+                <a href="#overview" class="nav-link active">
+                    <i class="fas fa-chart-line"></i>
+                    Overview
+                </a>
+                <a href="#teachers" class="nav-link">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    Teachers
+                </a>
+                <a href="#students" class="nav-link">
+                    <i class="fas fa-user-graduate"></i>
+                    Students
+                </a>
+                <a href="#classes" class="nav-link">
+                    <i class="fas fa-door-open"></i>
+                    Classes
+                </a>
+                <a href="#attendance" class="nav-link">
+                    <i class="fas fa-clipboard-list"></i>
+                    Attendance
+                </a>
+                <a href="#reports" class="nav-link">
+                    <i class="fas fa-file-alt"></i>
+                    Reports
+                </a>
+                <a href="#settings" class="nav-link">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="user-info">
+                    <h1>Welcome, <span id="adminName">Admin User</span></h1>
+                    <p id="adminRole">Administrator</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Add New
+                    </button>
+                </div>
+            </header>
+
+            <section id="overview" class="dashboard-section animate-fade-in">
+                <div class="stats-grid">
+                    <div class="stat-card animate-slide-up">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>Total Teachers</h3>
+                        <p>25</p>
+                    </div>
+                    <div class="stat-card animate-slide-up" style="animation-delay: 0.1s">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Total Students</h3>
+                        <p>500</p>
+                    </div>
+                    <div class="stat-card animate-slide-up" style="animation-delay: 0.2s">
+                        <i class="fas fa-door-open"></i>
+                        <h3>Total Classes</h3>
+                        <p>15</p>
+                    </div>
+                    <div class="stat-card animate-slide-up" style="animation-delay: 0.3s">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Attendance Rate</h3>
+                        <p>95%</p>
+                    </div>
+                </div>
+
+                <div class="table-container animate-scale">
+                    <div class="table-header">
+                        <h2>Recent Activities</h2>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-sync-alt"></i>
+                            Refresh
+                        </button>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>User</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>New Student Registration</td>
+                                <td>John Doe</td>
+                                <td>10:30 AM</td>
+                                <td><span class="status-badge success">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Teacher Assignment</td>
+                                <td>Jane Smith</td>
+                                <td>11:15 AM</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Other sections will be loaded dynamically -->
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html>
