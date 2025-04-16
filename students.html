@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System - Students</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h2>School Management</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="students.html" class="active">Students</a></li>
+                <li><a href="teachers.html">Teachers</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="subjects.html">Subjects</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="fees.html">Fee Payments</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="notifications.html">Notifications</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Student Management</h1>
+                <button id="addStudentBtn" class="btn-primary">Add New Student</button>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="search-filter">
+                <input type="text" id="searchInput" placeholder="Search students...">
+                <select id="classFilter">
+                    <option value="">All Classes</option>
+                    <option value="1">Class 1</option>
+                    <option value="2">Class 2</option>
+                    <!-- More classes will be added dynamically -->
+                </select>
+            </div>
+
+            <!-- Students Table -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Parent Name</th>
+                            <th>Contact</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentsTable">
+                        <!-- Students will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Add/Edit Student Modal -->
+            <div id="studentModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modalTitle">Add New Student</h2>
+                    <form id="studentForm">
+                        <div class="form-group">
+                            <label for="studentName">Full Name</label>
+                            <input type="text" id="studentName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentClass">Class</label>
+                            <select id="studentClass" required>
+                                <option value="">Select Class</option>
+                                <option value="1">Class 1</option>
+                                <option value="2">Class 2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="parentName">Parent Name</label>
+                            <input type="text" id="parentName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="tel" id="contactNumber" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea id="address" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/students.js"></script>
+</body>
+</html> 
